@@ -11,7 +11,11 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  console.log(res.bodyParser.signUpForm);
+  let firstName = req.body.firstName;
+  let lastName = req.body.lastName;
+  let eMail = req.body.eMail;
+
+  console.log(firstName, lastName, eMail);
 });
 
 app.listen(3000, function () {
